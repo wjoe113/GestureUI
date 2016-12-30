@@ -1,0 +1,22 @@
+﻿<Window x:Class="GestureUI3._0.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GestureUI3._0"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="550" Width="725">
+    <Grid>
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0">
+            <StackPanel Orientation="Vertical" HorizontalAlignment="Left">
+                <Button x:Name="buttonClear" HorizontalAlignment="Left" Margin="0, 0, 0, 10" VerticalAlignment="Top" Width="50" Height="21" Background="{DynamicResource {x:Static SystemColors.ControlDarkBrushKey}}" Content="Clear" Click="buttonClear_Click"/>
+                <Button x:Name="buttonExit" HorizontalAlignment="Left" Margin="0, 0, 0, 10" VerticalAlignment="Top" Width="51" Height="21" Background="{DynamicResource {x:Static SystemColors.ControlDarkBrushKey}}" Content="Exit" Click="buttonExit_Click"/>
+            </StackPanel>
+        </StackPanel>
+        <InkCanvas x:Name="myInkCanvas" Background="#FFF0FBFF" EditingMode="InkAndGesture" StrokeCollected="myInkCanvas_StrokeCollected" Margin="76,0,-3,0">
+            <InkCanvas.DefaultDrawingAttributes>
+                <DrawingAttributes Color="Black" Height="5" Width="5"></DrawingAttributes>
+            </InkCanvas.DefaultDrawingAttributes>
+        </InkCanvas>
+    </Grid>
+</Window>
